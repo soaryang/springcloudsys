@@ -1,0 +1,6 @@
+com\yangtengfei\springcloud\service\PaymentService.class
+com\yangtengfei\springcloud\dao\PaymentDao.class
+com\yangtengfei\springcloud\entities\Payment.class
+com\yangtengfei\springcloud\service\PaymentServiceImpl.class
+com\yangtengfei\springcloud\controller\PaymentController.class
+com\yangtengfei\springcloud\ProviderApplication8001.class
