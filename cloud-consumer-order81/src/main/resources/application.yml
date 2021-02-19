@@ -1,0 +1,15 @@
+server:
+  port: 81
+
+spring:
+  devtools:
+    restart:
+      enabled: true
+  freemarker:
+    cache: false
+  application:
+    name: cloud-order-service
+  cloud:
+    zookeeper:
+      connect-string: 192.168.199.10:2181
+
