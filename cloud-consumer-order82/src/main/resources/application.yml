@@ -1,0 +1,18 @@
+server:
+  port: 81
+
+spring:
+  devtools:
+    restart:
+      enabled: true
+  freemarker:
+    cache: false
+  application:
+    name: cloud-order-service
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+
