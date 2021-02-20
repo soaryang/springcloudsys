@@ -54,7 +54,8 @@ public class PaymentController {
     }
 
     @GetMapping("/getPaymentById")
-    public CommonResult getPaymentById(Long id) {
+    public CommonResult getPaymentById(Long id) throws InterruptedException {
+        Thread.sleep(6000);
         Payment payment = paymentService.getPaymentById(id);
         log.info("123123123123");
 
