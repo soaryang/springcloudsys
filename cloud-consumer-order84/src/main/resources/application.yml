@@ -1,0 +1,41 @@
+server:
+  port: 84
+
+spring:
+  devtools:
+    restart:
+      enabled: true
+  freemarker:
+    cache: false
+  application:
+    name: cloud-order-service
+
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: order84
+    #发送心跳的时间
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka01:7001/eureka/,http://eureka02:7002/eureka/,http://eureka03:7003/eureka/
+
+ribbon:
+  ReadTimeout: 7000
+  ConnectTimeout: 7000
+
+
+
+
+logging:
+  level:
+    com.yangtengfei.springcloud.service.PaymentService: debug
+
+
+feign:
+  hystrix:
+    enabled: true
